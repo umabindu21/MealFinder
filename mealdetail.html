@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MealFinder - Meal Details</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-dark fixed-top px-4 justify-content-between fw-bold"
+        style="background-color: #f37021; z-index: 1000;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light fw-bold" href="#">
+                <i class="bi bi-house-door-fill me-1"></i> MealFinder.
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end bg-light" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body d-flex flex-column">
+                    <ul class="navbar-nav h-100 d-flex flex-column justify-content-between flex-grow-1 pe-3">
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Beef</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Chicken</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Dessert</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Lamb</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Miscellaneous</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Pasta</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Pork</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Seafood</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Side</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Starter</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Vegan</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Vegetarian</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Breakfast</a></li>
+                        <li class="nav-item"><a class="nav-link" style="color: #6a6a6a;" href="#">Goat</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="position-relative text-center text-white" style="margin-top: 56px;">
+
+        <img src="./imp1.jpg" alt="Hero Image" style="width: 100%; height: 600px; object-fit: cover;">
+
+
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.45);"></div>
+
+
+        <div class="position-absolute top-50 start-50 translate-middle w-100 px-3 d-flex flex-column align-items-center"
+            style="z-index: 3;">
+
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <input type="text" class="form-control rounded-pill border-0 shadow-sm px-4 py-2 me-2"
+                    style="max-width: 350px;" placeholder="Search recipes here...">
+                <button class="btn rounded-circle d-flex align-items-center justify-content-center text-white border-0"
+                    style="background-color: #fd7e14; width: 45px; height: 45px;"
+                    onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#fd7e14';"
+                    onmouseout="this.style.backgroundColor='#fd7e14'; this.style.color='#ffffff';">
+                    <i class="bi bi-search fs-5"></i>
+                </button>
+            </div>
+
+            <h2 class="fw-bold text-white mb-2">What are your favorite cuisines?</h2>
+            <p class="text-light text-uppercase fw-semibold small" style="letter-spacing: 2px;">PERSONALIZE YOUR
+                EXPERIENCE</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <nav class="navbar px-4 justify-content-between fw-bold" style="background-color: #f37021; z-index: 1000;">
+            <div class="container-fluid">
+                <a class="navbar-brand text-light fw-bold" href="#">
+                    <i class="bi bi-house-door-fill me-1"></i> >> <span id="mealNameNav"></span>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container my-5 px-4" style="margin-top: 2000px;">
+        <div class="d-flex flex-column align-items-start">
+            <h5 class="fw-bold text-uppercase m-0" style="letter-spacing: 3px; font-size: 25px; color: #333333;">
+                MEAL DETAILS</h5>
+            <div style="width: 75px; height: 3px; background-color: #fd7e14;" class="mt-2"></div>
+        </div>
+    </div>
+
+    <div class="container my-5 bg-light">
+        <div class="row g-4">
+            <div class="col-md-5">
+                <img src="" id="mealImage" class="img-fluid" alt="...">
+            </div>
+            <div class="col-md-7 p-4">
+                <div class="card-body">
+                    <h3 id="mealName" style="color: #f37021;"></h3>
+                    <hr>
+                    <div class="mb-3 text-secondary" style="font-size: 13px;">
+                        <p class="mb-2 fw-bold" style="font-size: 15px;"><strong>CATEGORY:</strong> <span
+                                id="mealCategory"></span></p>
+                        <p class="mb-2">
+                            <strong>Source:</strong>
+                            <a id="mealSource" href="#" target="_blank"
+                                class="text-secondary text-decoration-underline"></a>
+                        </p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 border-">
+                        <span class="fw-bold text-dark me-1">Tags:</span>
+                        <span id="mealTags"></span>
+                    </div>
+
+                    <div class="p-3 rounded-2 text-white mt-3" style="background-color: #d96327;">
+                        <h6 class="fw-bold mb-3 border-bottom border-light pb-2" style="font-size: 14px;">Ingredients
+                        </h6>
+
+                        <div class="row row-cols-3 g-2" style="font-size: 13px;" id="ingredientsList">
+                           
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 px-4">
+        <div class="d-flex flex-column align-items-start">
+            <h5 class="fw-bold">
+                Measure:</h5>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="card bg-light p-4">
+            <div class="row row-cols-2 g-2" style="font-size: 13px;" id="mealMeasures">
+               
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 bg-light">
+
+        <h6 class="fw-bold text-dark mb-3" style="font-size: 15px;">Instructions:</h6>
+
+
+        <div class="d-flex flex-column gap-2 text-secondary" style="font-size: 13px; line-height: 1.6;" id="mealInstructions">
+
+        </div>
+    </div>
+
+    <div class="container my-5 px-4">    
+        <div class="d-flex flex-column align-items-start">
+            <h5 class="fw-bold text-uppercase m-0" style="letter-spacing: 3px; font-size: 25px; color: #333333;">
+                categories</h5>
+            <div style="width: 75px; height: 3px; background-color: #fd7e14;" class="mt-2"></div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div id="categoriesContainer" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./meal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
